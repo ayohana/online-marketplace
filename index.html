@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title>Online Marketplace</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.4.1.js"></script>
@@ -9,6 +9,89 @@
     <script src="js/scripts.js"></script>
   </head>
   <body>
+    <div class="jumbotron">
+      <div class="container text-center">
+        <h1 class="display-4">Welcome to our online pet store!</h1>
+        <hr>
+        <p>We sell pet accessories for cats and dogs from bandanas, bells to bows! Please select your purchase and provide your contact information below.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <form id="orderForm">
+        <div class="form-group">
+          <label for="shoppingItem">Select your shopping item</label>
+          <select class="form-control" id="shoppingItem">
+            <option value="collar">Collar</option>
+            <option value="bandana">Bandana</option>
+            <option value="bell">Bell</option>
+            <option value="bow">Bow</option>
+            <option value="leash">Leash</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="quantity">Quantity of item</label>
+          <select class="form-control" id="quantity">
+            <option value ="1">1</option>
+            <option value ="2">2</option>
+            <option value ="3">3</option>
+          </select>
+          <small class="form-text text-mute">Maximum quantity to order is 3 due to all products are homemade to order.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="fullName">Your Full Name</label>
+          <input type="text" class="form-control" id="fullName" placeholder="Full Name">
+        </div>
+
+        <div class="form-group">
+          <label for="address">Delivery Address</label>
+          <input type="text" class="form-control" id="address" placeholder="123 Street">
+        </div>
+
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type="text" class="form-control" id="city" placeholder="City">
+        </div>
+
+        <div class="form-group">
+          <label for="state">State</label>
+          <input type="text" class="form-control" id="state" placeholder="State">
+        </div>
+
+        <div class="form-group">
+          <label for="zip">Zip Code</label>
+          <input type="number" class="form-control" id="zip" placeholder="12345">
+        </div>
+
+        <button type="button submit" class="btn btn-primary" data-toggle="modal" data-target="#confirm">Order</button>
+      </form>
+    </div>
+
+    <div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="confirmPopUp" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="confirmPopUp">Order Confirmation</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>You have successfully placed your order!</h6>
+            <p>Your item(s) are:</p>
+            <p><span id="outputItems"></span></p>
+            <p>They will be delivered to:</p>
+            <p><span id="outputAddress"></span></p>
+            <h6>Thank you for your order, <span id="outputName"></span>!</h6>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </body>
 </html>
