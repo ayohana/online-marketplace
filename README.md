@@ -1,4 +1,4 @@
-# Application Name
+# Online Marketplace
 
 #### JavaScript and jQuery Exercise for Epicodus, 01.15.2020
 
@@ -6,7 +6,7 @@
 
 ## Description
 
-This is ...
+This is an online pet accessories shop. This webpage is practice for forms and form input types.
 
 ## Setup/Installation Requirements
 
